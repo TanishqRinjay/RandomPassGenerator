@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  background-color: rgb(59, 59, 152);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100vh;
+}
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+input[type="checkbox"] {
+  margin-right: 0;
+}
+.container {
+  background-color: #23235b;
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+}
+.result-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+.result-container .btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+}
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #3b3b98;
+}
+.btn-large {
+  display: block;
+  width: 100%;
+}
+.setting {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  .result-container {
+    font-size: 14px;
+  }
+}
