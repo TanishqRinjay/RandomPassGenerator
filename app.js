@@ -32,6 +32,7 @@ generateEl.addEventListener("click", () => {
 });
 
 //  Copy password to Clipboard
+
 clipboardEl.addEventListener("click", () => {
   const textArea = document.createElement("textarea");
   const password = resultEl.innerText;
@@ -47,6 +48,7 @@ clipboardEl.addEventListener("click", () => {
 });
 
 //Funtions to generate password
+
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = "";
   const typesCount = lower + upper + number + symbol;
@@ -61,7 +63,6 @@ function generatePassword(lower, upper, number, symbol, length) {
   for (let i = 0; i < length; i += typesCount) {
     typeArray.forEach((type) => {
       const funcName = Object.keys(type)[0];
-      //   console.log("funcName: " + funcName);
       generatedPassword += randomFunc[funcName]();
     });
   }
@@ -83,9 +84,4 @@ function getRandomNumber() {
 function getRandomSymbols() {
   const symbols = "~!@#$%^&*()_+-=";
   return symbols[Math.floor(Math.random() * symbols.length)];
-  //   console.log(symbols[Math.floor(Math.random() * symbols.length)]);
 }
-// console.log(getRandomLower());
-// console.log(getRandomUpper());
-// console.log(getRandomNumber());
-// console.log(getRandomSymbols());
